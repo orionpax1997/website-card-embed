@@ -32,3 +32,11 @@ yarn-error.log*
 
 # vercel
 .vercel
+
+# Include when developing application packages.
+.vscode/launch.json
+.vscode/settings.json
+.vscode/tasks.json
+
+# Husky
+.husky/_
