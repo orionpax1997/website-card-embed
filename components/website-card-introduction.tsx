@@ -14,9 +14,10 @@ const WebsiteCardIntroduction = ({ url, title, description, image, favicon }: An
           <Flex
             h="120px"
             maxW="1200px"
+            minW="600px"
             borderWidth="1px"
             borderRadius="lg"
-            w="800px"
+            w="100%"
             _hover={{ backgroundColor: 'rgba(55, 53, 47, 0.08)' }}
           >
             <VStack align="stretch" w={image ? '60%' : '100%'} p="15px">
