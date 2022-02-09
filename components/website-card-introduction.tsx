@@ -10,16 +10,15 @@ const WebsiteCardIntroduction = ({ url, title, description, image, favicon }: An
         <meta name="description" content={description}></meta>
       </Head>
       <Center>
-        <LinkBox>
-          <Flex
-            h="120px"
-            maxW="1200px"
-            minW="600px"
-            borderWidth="1px"
-            borderRadius="lg"
-            w="100%"
-            _hover={{ backgroundColor: 'rgba(55, 53, 47, 0.08)' }}
-          >
+        <LinkBox
+          w="100%"
+          maxW="1200px"
+          minW="600px"
+          borderWidth="1px"
+          borderRadius="lg"
+          _hover={{ backgroundColor: 'rgba(55, 53, 47, 0.08)' }}
+        >
+          <Flex h="120px">
             <VStack align="stretch" w={image ? '60%' : '100%'} p="15px">
               <Box fontSize="sm" fontWeight="semibold" as="h4" isTruncated>
                 <LinkOverlay href={url} target="_blank">
