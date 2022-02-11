@@ -1,6 +1,6 @@
 import Head from 'next/head';
 import { Box, Center, Flex, HStack, VStack, Image, Text, LinkBox, LinkOverlay } from '@chakra-ui/react';
-import { AnalysisData } from '../utils/analysis';
+import { AnalysisData } from '@humble.xiang/website-description-analysis';
 
 const WebsiteCardIntroduction = ({ url, title, description, image, favicon }: AnalysisData) => {
   return (

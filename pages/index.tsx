@@ -1,6 +1,6 @@
 import { useRouter } from 'next/router';
 import useSWR, { Fetcher } from 'swr';
-import { AnalysisData } from '../utils/analysis';
+import { AnalysisData } from '@humble.xiang/website-description-analysis';
 import WebsiteCardIntroductionLoading from '@/components/website-card-introduction-loading';
 import WebsiteCardIntroduction from '@/components/website-card-introduction';
 
