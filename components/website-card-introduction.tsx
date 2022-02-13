@@ -8,6 +8,7 @@ const WebsiteCardIntroduction = ({ url, title, description, image, favicon }: An
       <Head>
         <title>{title}</title>
         <meta name="description" content={description}></meta>
+        <meta name="referrer" content="no-referrer"></meta>
       </Head>
       <Center>
         <LinkBox
