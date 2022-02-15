@@ -1,24 +1,26 @@
+import { useEffect } from 'react';
 import { useRouter } from 'next/router';
 import useSWR, { Fetcher } from 'swr';
 import { AnalysisData } from '@humble.xiang/website-description-analysis';
 import WebsiteCardIntroductionLoading from '@/components/website-card-introduction-loading';
 import WebsiteCardIntroduction from '@/components/website-card-introduction';
-import { ColorModeScript } from '@chakra-ui/react';
+import { useColorMode } from '@chakra-ui/react';
 
 function AnalysisPage() {
   const url = useRouter().query.url as string;
-  const colorMode = useRouter().query.colorMode as string;
+  const websiteCardEmbedColorMode = useRouter().query.colorMode as string;
+  const { colorMode, toggleColorMode } = useColorMode();
   const { isLoading, analysisData } = useAnalysisData(url);
-  return (
-    <>
-      <ColorModeScript initialColorMode={colorMode === 'dark' ? 'dark' : colorMode === 'light' ? 'light' : 'system'} />
-      {isLoading
-        ? WebsiteCardIntroductionLoading()
-        : analysisData
-        ? WebsiteCardIntroduction(analysisData)
-        : WebsiteCardIntroductionLoading()}
-    </>
-  );
+
+  useEffect(() => {
+    if (websiteCardEmbedColorMode && websiteCardEmbedColorMode !== colorMode) {
+      toggleColorMode();
+    }
+  }, [websiteCardEmbedColorMode, colorMode, toggleColorMode]);
+
+  if (isLoading) return WebsiteCardIntroductionLoading();
+  if (analysisData) return WebsiteCardIntroduction(analysisData);
+  return WebsiteCardIntroductionLoading();
 }
 
 const analysisDataFetcher: Fetcher<AnalysisData, string> = url => fetch(url).then(res => res.json());
