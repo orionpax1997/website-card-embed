@@ -19,7 +19,7 @@ const WebsiteCardIntroduction = ({ url, title, description, image, favicon }: An
           _hover={{ backgroundColor: 'rgba(55, 53, 47, 0.08)' }}
         >
           <Flex h="120px">
-            <VStack align="stretch" w={image ? '60%' : '100%'} p="15px">
+            <VStack alignItems="stretch" justifyContent="space-between" w={image ? '60%' : '100%'} p="15px">
               <Box fontSize="sm" fontWeight="semibold" as="h4" isTruncated>
                 <LinkOverlay href={url} target="_blank">
                   {title}

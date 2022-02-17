@@ -1,24 +1,173 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`snapshot build WebsiteCardIntroduction 1`] = `
+.emotion-0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+}
+
+.emotion-1 {
+  position: relative;
+  width: 100%;
+  max-width: 1200px;
+  min-width: 600px;
+  border-width: 1px;
+  border-radius: lg;
+}
+
+.emotion-1 a[href]:not(.chakra-linkbox__overlay),
+.emotion-1 abbr[title] {
+  position: relative;
+  z-index: 1;
+}
+
+.emotion-1:hover,
+.emotion-1[data-hover] {
+  background-color: rgba(55, 53, 47, 0.08);
+}
+
+.emotion-2 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  height: 120px;
+}
+
+.emotion-3 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: stretch;
+  -webkit-box-align: stretch;
+  -ms-flex-align: stretch;
+  align-items: stretch;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  justify-content: space-between;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  width: 60%;
+  padding: 15px;
+}
+
+.emotion-3>*:not(style)~*:not(style) {
+  margin-top: 0.5rem;
+  -webkit-margin-end: 0px;
+  margin-inline-end: 0px;
+  margin-bottom: 0px;
+  -webkit-margin-start: 0px;
+  margin-inline-start: 0px;
+}
+
+.emotion-4 {
+  font-size: sm;
+  font-weight: semibold;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.emotion-5 {
+  position: static;
+}
+
+.emotion-5::before {
+  content: '';
+  cursor: inherit;
+  display: block;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  z-index: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.emotion-7 {
+  font-size: xs;
+  color: gray.500;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: var(--chakra-line-clamp);
+  --chakra-line-clamp: 2;
+}
+
+.emotion-8 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+}
+
+.emotion-8>*:not(style)~*:not(style) {
+  margin-top: 0px;
+  -webkit-margin-end: 0px;
+  margin-inline-end: 0px;
+  margin-bottom: 0px;
+  -webkit-margin-start: 10px;
+  margin-inline-start: 10px;
+}
+
+.emotion-9 {
+  width: 16px;
+  height: 16px;
+  border-radius: sm;
+}
+
+.emotion-10 {
+  font-size: xs;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.emotion-11 {
+  object-fit: cover;
+  width: 40%;
+  height: 100%;
+  border-radius: sm;
+}
+
 <div>
   <div
-    class="css-gmuwbf"
+    class="emotion-0"
   >
     <div
-      class="chakra-linkbox css-gfjtic"
+      class="chakra-linkbox emotion-1"
     >
       <div
-        class="css-da13x"
+        class="emotion-2"
       >
         <div
-          class="chakra-stack css-whissx"
+          class="chakra-stack emotion-3"
         >
           <h4
-            class="css-zx51qw"
+            class="emotion-4"
           >
             <a
-              class="chakra-linkbox__overlay css-1hnz6hu"
+              class="chakra-linkbox__overlay emotion-5"
               href="https://humble-blog.vercel.app/"
               target="_blank"
             >
@@ -26,24 +175,24 @@ exports[`snapshot build WebsiteCardIntroduction 1`] = `
             </a>
           </h4>
           <div
-            class="css-0"
+            class="emotion-6"
           >
             <p
-              class="chakra-text css-1s2aj5y"
+              class="chakra-text emotion-7"
             >
               一个打工人的个人博客小站
             </p>
           </div>
           <div
-            class="chakra-stack css-k7bpxb"
+            class="chakra-stack emotion-8"
           >
             <img
               alt="website card icon"
-              class="chakra-image css-f6brzi"
+              class="chakra-image emotion-9"
               src="https://t3.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE,SIZE,URL&url=https://humble-blog.vercel.app/&size=16"
             />
             <p
-              class="chakra-text css-m70ba5"
+              class="chakra-text emotion-10"
             >
               https://humble-blog.vercel.app/
             </p>
@@ -51,7 +200,7 @@ exports[`snapshot build WebsiteCardIntroduction 1`] = `
         </div>
         <img
           alt="website card image"
-          class="chakra-image css-1nvrwv4"
+          class="chakra-image emotion-11"
           src="https://images.weserv.nl/?url=https://humble-blog.vercel.app/images/avatar.jpg"
         />
       </div>
@@ -61,28 +210,162 @@ exports[`snapshot build WebsiteCardIntroduction 1`] = `
 `;
 
 exports[`snapshot build WebsiteCardIntroductionLoading 1`] = `
+.emotion-0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+}
+
+.emotion-1 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  height: 120px;
+  max-width: 1200px;
+  min-width: 600px;
+  border-width: 1px;
+  border-radius: lg;
+  width: 100%;
+}
+
+.emotion-2 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: stretch;
+  -webkit-box-align: stretch;
+  -ms-flex-align: stretch;
+  align-items: stretch;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  width: 60%;
+  padding: 15px;
+}
+
+.emotion-2>*:not(style)~*:not(style) {
+  margin-top: 0.5rem;
+  -webkit-margin-end: 0px;
+  margin-inline-end: 0px;
+  margin-bottom: 0px;
+  -webkit-margin-start: 0px;
+  margin-inline-start: 0px;
+}
+
+.emotion-3 {
+  box-shadow: none;
+  -webkit-background-clip: padding-box;
+  background-clip: padding-box;
+  cursor: default;
+  color: transparent;
+  pointer-events: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  height: 20px;
+}
+
+.emotion-3::before,
+.emotion-3::after,
+.emotion-3 * {
+  visibility: hidden;
+}
+
+.emotion-4 {
+  box-shadow: none;
+  -webkit-background-clip: padding-box;
+  background-clip: padding-box;
+  cursor: default;
+  color: transparent;
+  pointer-events: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  height: 40px;
+}
+
+.emotion-4::before,
+.emotion-4::after,
+.emotion-4 * {
+  visibility: hidden;
+}
+
+.emotion-5 {
+  box-shadow: none;
+  -webkit-background-clip: padding-box;
+  background-clip: padding-box;
+  cursor: default;
+  color: transparent;
+  pointer-events: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  height: 16px;
+}
+
+.emotion-5::before,
+.emotion-5::after,
+.emotion-5 * {
+  visibility: hidden;
+}
+
+.emotion-6 {
+  box-shadow: none;
+  -webkit-background-clip: padding-box;
+  background-clip: padding-box;
+  cursor: default;
+  color: transparent;
+  pointer-events: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  width: 40%;
+  height: 100%;
+}
+
+.emotion-6::before,
+.emotion-6::after,
+.emotion-6 * {
+  visibility: hidden;
+}
+
 <div>
   <div
-    class="css-gmuwbf"
+    class="emotion-0"
   >
     <div
-      class="css-1y8o4jq"
+      class="emotion-1"
     >
       <div
-        class="chakra-stack css-whissx"
+        class="chakra-stack emotion-2"
       >
         <div
-          class="chakra-skeleton css-16lwe9v"
+          class="chakra-skeleton emotion-3"
         />
         <div
-          class="chakra-skeleton css-1ou8gbg"
+          class="chakra-skeleton emotion-4"
         />
         <div
-          class="chakra-skeleton css-80kv3h"
+          class="chakra-skeleton emotion-5"
         />
       </div>
       <div
-        class="chakra-skeleton css-i2ejzm"
+        class="chakra-skeleton emotion-6"
       />
     </div>
   </div>
