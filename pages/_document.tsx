@@ -5,6 +5,7 @@ class MyDocument extends Document {
     return (
       <Html>
         <Head>
+          <meta name="referrer" content="never"></meta>
           <link rel="preconnect" href="https://t3.gstatic.com"></link>
           <link rel="preconnect" href="https://images.weserv.nl"></link>
           <link rel="preconnect" href="https://vitals.vercel-insights.com"></link>

@@ -18,7 +18,7 @@
     "@chakra-ui/react": "^1.8.0",
     "@emotion/react": "^11",
     "@emotion/styled": "^11",
-    "@humble.xiang/website-description-analysis": "^0.0.5",
+    "@humble.xiang/website-description-analysis": "^0.0.9",
     "cheerio": "^1.0.0-rc.10",
     "framer-motion": "^5",
     "next": "^12.0.8",
