@@ -367,7 +367,7 @@ exports[`snapshot build WebsiteCardIntroductionError 1`] = `
               href="https://humble-blog.vercel.app/"
               target="_blank"
             >
-              很抱歉, 你的请求无法正常解析
+              很抱歉, 嵌入网址的描述信息无法正常解析
             </a>
           </h4>
           <div

@@ -30,6 +30,7 @@ const analysisDataFetcher: Fetcher<AnalysisData, string> = url => fetch(url).the
 function useAnalysisData(url: string) {
   if (url) console.info(`useAnalysisData with url:${url}`);
   const { data, error } = useSWR(url ? `/api/analysis?url=${url}` : null, analysisDataFetcher, {
+    revalidateOnFocus: false,
     shouldRetryOnError: false,
   });
   if (error) console.error(error);

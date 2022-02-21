@@ -15,7 +15,7 @@ const WebsiteCardIntroductionError = ({ url }: { url: string }) => {
           <VStack alignItems="stretch" justifyContent="space-between" w="100%" p="15px">
             <Box fontSize="sm" fontWeight="semibold" as="h4" isTruncated>
               <LinkOverlay href={url} target="_blank">
-                很抱歉, 你的请求无法正常解析
+                很抱歉, 嵌入网址的描述信息无法正常解析
               </LinkOverlay>
             </Box>
             <Box>
