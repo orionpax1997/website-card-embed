@@ -209,6 +209,192 @@ exports[`snapshot build WebsiteCardIntroduction 1`] = `
 </div>
 `;
 
+exports[`snapshot build WebsiteCardIntroductionError 1`] = `
+.emotion-0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+}
+
+.emotion-1 {
+  position: relative;
+  width: 100%;
+  max-width: 1200px;
+  min-width: 600px;
+  border-width: 1px;
+  border-radius: lg;
+}
+
+.emotion-1 a[href]:not(.chakra-linkbox__overlay),
+.emotion-1 abbr[title] {
+  position: relative;
+  z-index: 1;
+}
+
+.emotion-1:hover,
+.emotion-1[data-hover] {
+  background-color: rgba(55, 53, 47, 0.08);
+}
+
+.emotion-2 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  height: 120px;
+}
+
+.emotion-3 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: stretch;
+  -webkit-box-align: stretch;
+  -ms-flex-align: stretch;
+  align-items: stretch;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  justify-content: space-between;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  width: 100%;
+  padding: 15px;
+}
+
+.emotion-3>*:not(style)~*:not(style) {
+  margin-top: 0.5rem;
+  -webkit-margin-end: 0px;
+  margin-inline-end: 0px;
+  margin-bottom: 0px;
+  -webkit-margin-start: 0px;
+  margin-inline-start: 0px;
+}
+
+.emotion-4 {
+  font-size: sm;
+  font-weight: semibold;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.emotion-5 {
+  position: static;
+}
+
+.emotion-5::before {
+  content: '';
+  cursor: inherit;
+  display: block;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  z-index: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.emotion-7 {
+  font-size: xs;
+  color: gray.500;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: var(--chakra-line-clamp);
+  --chakra-line-clamp: 2;
+}
+
+.emotion-8 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+}
+
+.emotion-8>*:not(style)~*:not(style) {
+  margin-top: 0px;
+  -webkit-margin-end: 0px;
+  margin-inline-end: 0px;
+  margin-bottom: 0px;
+  -webkit-margin-start: 10px;
+  margin-inline-start: 10px;
+}
+
+.emotion-9 {
+  font-size: xs;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+<div>
+  <div
+    class="emotion-0"
+  >
+    <div
+      class="chakra-linkbox emotion-1"
+    >
+      <div
+        class="emotion-2"
+      >
+        <div
+          class="chakra-stack emotion-3"
+        >
+          <h4
+            class="emotion-4"
+          >
+            <a
+              class="chakra-linkbox__overlay emotion-5"
+              href="https://humble-blog.vercel.app/"
+              target="_blank"
+            >
+              很抱歉, 你的请求无法正常解析
+            </a>
+          </h4>
+          <div
+            class="emotion-6"
+          >
+            <p
+              class="chakra-text emotion-7"
+            >
+              请直接点击卡片访问原网页查看。或者您可以补充更多参数, 来跳过解析直接展示静态卡片。
+            </p>
+          </div>
+          <div
+            class="chakra-stack emotion-8"
+          >
+            <p
+              class="chakra-text emotion-9"
+            >
+              https://humble-blog.vercel.app/
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
 exports[`snapshot build WebsiteCardIntroductionLoading 1`] = `
 .emotion-0 {
   display: -webkit-box;

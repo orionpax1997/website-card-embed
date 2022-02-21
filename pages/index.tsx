@@ -3,6 +3,7 @@ import { useRouter } from 'next/router';
 import useSWR, { Fetcher } from 'swr';
 import { AnalysisData } from '@humble.xiang/website-description-analysis';
 import WebsiteCardIntroductionLoading from '@/components/website-card-introduction-loading';
+import WebsiteCardIntroductionError from '@/components/website-card-introduction-error';
 import WebsiteCardIntroduction from '@/components/website-card-introduction';
 import { useColorMode } from '@chakra-ui/react';
 
@@ -10,7 +11,7 @@ function AnalysisPage() {
   const url = useRouter().query.url as string;
   const websiteCardEmbedColorMode = useRouter().query.colorMode as string;
   const { colorMode, toggleColorMode } = useColorMode();
-  const { isLoading, analysisData } = useAnalysisData(url);
+  const { isLoading, isError, analysisData } = useAnalysisData(url);
 
   useEffect(() => {
     if (websiteCardEmbedColorMode && websiteCardEmbedColorMode !== colorMode) {
@@ -18,6 +19,7 @@ function AnalysisPage() {
     }
   }, [websiteCardEmbedColorMode, colorMode, toggleColorMode]);
 
+  if (isError) return WebsiteCardIntroductionError({ url });
   if (isLoading) return WebsiteCardIntroductionLoading();
   if (analysisData) return WebsiteCardIntroduction(analysisData);
   return WebsiteCardIntroductionLoading();
@@ -27,7 +29,9 @@ const analysisDataFetcher: Fetcher<AnalysisData, string> = url => fetch(url).the
 
 function useAnalysisData(url: string) {
   if (url) console.info(`useAnalysisData with url:${url}`);
-  const { data, error } = useSWR(url ? `/api/analysis?url=${url}` : null, analysisDataFetcher);
+  const { data, error } = useSWR(url ? `/api/analysis?url=${url}` : null, analysisDataFetcher, {
+    shouldRetryOnError: false,
+  });
   if (error) console.error(error);
   return {
     analysisData: data,

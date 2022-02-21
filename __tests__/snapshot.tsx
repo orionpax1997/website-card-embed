@@ -1,6 +1,7 @@
 import { render } from '@testing-library/react';
 import WebsiteCardIntroduction from '@/components/website-card-introduction';
 import WebsiteCardIntroductionLoading from '@/components/website-card-introduction-loading';
+import WebsiteCardIntroductionError from '@/components/website-card-introduction-error';
 
 describe('snapshot', () => {
   it('build WebsiteCardIntroduction', () => {
@@ -18,6 +19,11 @@ describe('snapshot', () => {
 
   it('build WebsiteCardIntroductionLoading', () => {
     const { container } = render(<WebsiteCardIntroductionLoading />);
+    expect(container).toMatchSnapshot();
+  });
+
+  it('build WebsiteCardIntroductionError', () => {
+    const { container } = render(<WebsiteCardIntroductionError url="https://humble-blog.vercel.app/" />);
     expect(container).toMatchSnapshot();
   });
 });
