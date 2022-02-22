@@ -8,10 +8,12 @@ import WebsiteCardIntroduction from '@/components/website-card-introduction';
 import { useColorMode } from '@chakra-ui/react';
 
 function AnalysisPage() {
-  const url = useRouter().query.url as string;
+  const queryAnalysisData = { ...useRouter().query } as AnalysisData;
   const websiteCardEmbedColorMode = useRouter().query.colorMode as string;
   const { colorMode, toggleColorMode } = useColorMode();
-  const { isLoading, isError, analysisData } = useAnalysisData(url);
+  const { isLoading, isError, analysisData } = useAnalysisData(
+    queryAnalysisData.title ? undefined : queryAnalysisData.url
+  );
 
   useEffect(() => {
     if (websiteCardEmbedColorMode && websiteCardEmbedColorMode !== colorMode) {
@@ -19,7 +21,8 @@ function AnalysisPage() {
     }
   }, [websiteCardEmbedColorMode, colorMode, toggleColorMode]);
 
-  if (isError) return WebsiteCardIntroductionError({ url });
+  if (queryAnalysisData.title) return WebsiteCardIntroduction(queryAnalysisData);
+  if (isError) return WebsiteCardIntroductionError({ url: queryAnalysisData.url });
   if (isLoading) return WebsiteCardIntroductionLoading();
   if (analysisData) return WebsiteCardIntroduction(analysisData);
   return WebsiteCardIntroductionLoading();
@@ -27,7 +30,7 @@ function AnalysisPage() {
 
 const analysisDataFetcher: Fetcher<AnalysisData, string> = url => fetch(url).then(res => res.json());
 
-function useAnalysisData(url: string) {
+function useAnalysisData(url: string | undefined) {
   if (url) console.info(`useAnalysisData with url:${url}`);
   const { data, error } = useSWR(url ? `/api/analysis?url=${url}` : null, analysisDataFetcher, {
     revalidateOnFocus: false,

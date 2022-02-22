@@ -31,7 +31,7 @@ const WebsiteCardIntroduction = ({ url, title, description, image, favicon }: An
                 </Text>
               </Box>
               <HStack spacing="10px">
-                <Image w="16px" h="16px" borderRadius="sm" src={favicon} alt="website card icon" />
+                {favicon && <Image w="16px" h="16px" borderRadius="sm" src={favicon} alt="website card icon" />}
                 <Text fontSize="xs" isTruncated>
                   {url}
                 </Text>
