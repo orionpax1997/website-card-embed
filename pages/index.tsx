@@ -21,11 +21,11 @@ function AnalysisPage() {
     }
   }, [websiteCardEmbedColorMode, colorMode, toggleColorMode]);
 
-  if (queryAnalysisData.title) return WebsiteCardIntroduction(queryAnalysisData);
-  if (isError) return WebsiteCardIntroductionError({ url: queryAnalysisData.url });
-  if (isLoading) return WebsiteCardIntroductionLoading();
-  if (analysisData) return WebsiteCardIntroduction(analysisData);
-  return WebsiteCardIntroductionLoading();
+  if (queryAnalysisData.title) return <WebsiteCardIntroduction {...queryAnalysisData} />;
+  if (isError) return <WebsiteCardIntroductionError url={queryAnalysisData.url} />;
+  if (isLoading) return <WebsiteCardIntroductionLoading />;
+  if (analysisData) return <WebsiteCardIntroduction {...analysisData} />;
+  return <WebsiteCardIntroductionLoading />;
 }
 
 const analysisDataFetcher: Fetcher<AnalysisData, string> = url => fetch(url).then(res => res.json());
