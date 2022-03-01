@@ -16,7 +16,7 @@ const WebsiteCardIntroduction = ({ url, title, description, image, favicon }: An
         <LinkBox
           w="100%"
           maxW="1200px"
-          minW="600px"
+          minW="620px"
           borderWidth="1px"
           borderRadius="lg"
           _hover={{ backgroundColor: 'rgba(55, 53, 47, 0.08)' }}

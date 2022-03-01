@@ -20,7 +20,7 @@ exports[`snapshot build WebsiteCardIntroduction 1`] = `
   position: relative;
   width: 100%;
   max-width: 1200px;
-  min-width: 600px;
+  min-width: 620px;
   border-width: 1px;
   border-radius: lg;
 }
@@ -418,7 +418,6 @@ exports[`snapshot build WebsiteCardIntroductionLoading 1`] = `
   display: flex;
   height: 120px;
   max-width: 1200px;
-  min-width: 600px;
   border-width: 1px;
   border-radius: lg;
   width: 100%;
@@ -553,6 +552,189 @@ exports[`snapshot build WebsiteCardIntroductionLoading 1`] = `
       <div
         class="chakra-skeleton emotion-6"
       />
+    </div>
+  </div>
+</div>
+`;
+
+exports[`snapshot build WebsiteCardIntroductionMobile 1`] = `
+.emotion-0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+}
+
+.emotion-1 {
+  position: relative;
+  width: 100%;
+  max-width: 620px;
+  border-width: 1px;
+  border-radius: lg;
+}
+
+.emotion-1 a[href]:not(.chakra-linkbox__overlay),
+.emotion-1 abbr[title] {
+  position: relative;
+  z-index: 1;
+}
+
+.emotion-1:hover,
+.emotion-1[data-hover] {
+  background-color: rgba(55, 53, 47, 0.08);
+}
+
+.emotion-2 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: stretch;
+  -webkit-box-align: stretch;
+  -ms-flex-align: stretch;
+  align-items: stretch;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  justify-content: space-between;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  padding: 15px;
+}
+
+.emotion-2>*:not(style)~*:not(style) {
+  margin-top: 0.5rem;
+  -webkit-margin-end: 0px;
+  margin-inline-end: 0px;
+  margin-bottom: 0px;
+  -webkit-margin-start: 0px;
+  margin-inline-start: 0px;
+}
+
+.emotion-3 {
+  font-size: sm;
+  font-weight: semibold;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.emotion-4 {
+  position: static;
+}
+
+.emotion-4::before {
+  content: '';
+  cursor: inherit;
+  display: block;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  z-index: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.emotion-6 {
+  font-size: xs;
+  color: gray.500;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: var(--chakra-line-clamp);
+  --chakra-line-clamp: 2;
+}
+
+.emotion-7 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+}
+
+.emotion-7>*:not(style)~*:not(style) {
+  margin-top: 0px;
+  -webkit-margin-end: 0px;
+  margin-inline-end: 0px;
+  margin-bottom: 0px;
+  -webkit-margin-start: 10px;
+  margin-inline-start: 10px;
+}
+
+.emotion-8 {
+  width: 16px;
+  height: 16px;
+  border-radius: sm;
+}
+
+.emotion-9 {
+  font-size: xs;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+<div>
+  <div
+    class="emotion-0"
+  >
+    <div
+      class="chakra-linkbox emotion-1"
+    >
+      <div
+        class="chakra-stack emotion-2"
+      >
+        <h4
+          class="emotion-3"
+        >
+          <a
+            class="chakra-linkbox__overlay emotion-4"
+            href="https://humble-blog.vercel.app/"
+            target="_blank"
+          >
+            向之礼的个人博客
+          </a>
+        </h4>
+        <div
+          class="emotion-5"
+        >
+          <p
+            class="chakra-text emotion-6"
+          >
+            一个打工人的个人博客小站
+          </p>
+        </div>
+        <div
+          class="chakra-stack emotion-7"
+        >
+          <img
+            alt="website card icon"
+            class="chakra-image emotion-8"
+            src="https://t3.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE,SIZE,URL&url=https://humble-blog.vercel.app/&size=16"
+          />
+          <p
+            class="chakra-text emotion-9"
+          >
+            https://humble-blog.vercel.app/
+          </p>
+        </div>
+      </div>
     </div>
   </div>
 </div>

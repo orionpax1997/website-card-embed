@@ -1,10 +1,11 @@
-import { useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import { useRouter } from 'next/router';
 import useSWR, { Fetcher } from 'swr';
 import { AnalysisData } from '@humble.xiang/website-description-analysis';
-import WebsiteCardIntroductionLoading from '@/components/website-card-introduction-loading';
-import WebsiteCardIntroductionError from '@/components/website-card-introduction-error';
 import WebsiteCardIntroduction from '@/components/website-card-introduction';
+import WebsiteCardIntroductionMobile from '@/components/website-card-introduction-mobile';
+import WebsiteCardIntroductionError from '@/components/website-card-introduction-error';
+import WebsiteCardIntroductionLoading from '@/components/website-card-introduction-loading';
 import { useColorMode } from '@chakra-ui/react';
 
 function AnalysisPage() {
@@ -14,6 +15,7 @@ function AnalysisPage() {
   const { isLoading, isError, analysisData } = useAnalysisData(
     queryAnalysisData.title ? undefined : queryAnalysisData.url
   );
+  const [width, setWidth] = useState(typeof window !== 'undefined' ? window.innerWidth : 0);
 
   useEffect(() => {
     if (websiteCardEmbedColorMode && websiteCardEmbedColorMode !== colorMode) {
@@ -21,11 +23,27 @@ function AnalysisPage() {
     }
   }, [websiteCardEmbedColorMode, colorMode, toggleColorMode]);
 
-  if (queryAnalysisData.title) return <WebsiteCardIntroduction {...queryAnalysisData} />;
+  useEffect(() => {
+    const handleWindowResize = () => setWidth(window.innerWidth);
+    window.addEventListener('resize', handleWindowResize);
+    return () => window.removeEventListener('resize', handleWindowResize);
+  }, [width]);
+
+  if (queryAnalysisData.title)
+    return width < 620 ? (
+      <WebsiteCardIntroductionMobile {...queryAnalysisData} />
+    ) : (
+      <WebsiteCardIntroduction {...queryAnalysisData} />
+    );
   if (isError) return <WebsiteCardIntroductionError url={queryAnalysisData.url} />;
-  if (isLoading) return <WebsiteCardIntroductionLoading />;
-  if (analysisData) return <WebsiteCardIntroduction {...analysisData} />;
-  return <WebsiteCardIntroductionLoading />;
+  if (isLoading) return <WebsiteCardIntroductionLoading hasImage={width >= 620} />;
+  if (analysisData)
+    return width < 620 ? (
+      <WebsiteCardIntroductionMobile {...analysisData} />
+    ) : (
+      <WebsiteCardIntroduction {...analysisData} />
+    );
+  return <WebsiteCardIntroductionLoading hasImage={width >= 620} />;
 }
 
 const analysisDataFetcher: Fetcher<AnalysisData, string> = url => fetch(url).then(res => res.json());
