@@ -1,5 +1,5 @@
 {{- if .IsNamedParams -}}
-<iframe class="website-card-embed" data-src="https://website-card-embed.vercel.app/?url={{ .Get `url` }}&title={{ .Get `title` }}&description={{ .Get `description` }}&image={{ .Get `image` }}&favicon={{ .Get `favicon` }}" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"></iframe>
+<iframe class="website-card-embed" data-src="https://website-card-embed.vercel.app/?url={{ .Get `url` }}&title={{ .Get `title` }}&description={{ .Get `description` }}&image={{ .Get `image` }}&favicon={{ .Get `favicon` }}" frameborder="no"></iframe>
 {{- else -}}
-<iframe class="website-card-embed" data-src="https://website-card-embed.vercel.app/?url={{ .Get 0 }}" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"></iframe>
+<iframe class="website-card-embed" data-src="https://website-card-embed.vercel.app/?url={{ .Get 0 }}" frameborder="no"></iframe>
 {{- end -}}
