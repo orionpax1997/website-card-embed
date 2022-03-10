@@ -1,0 +1,15 @@
+{{- if .IsNamedParams -}}
+<iframe
+  class="website-card-embed"
+  data-src="https://website-card-embed-demo.vercel.app/?url={{ .Get `url` }}&title={{ .Get `title` }}&description={{ .Get `description` }}&image={{ .Get `image` }}&favicon={{ .Get `favicon` }}"
+  style="width: 100%; height: 124px"
+  frameborder="no"
+></iframe>
+{{- else -}}
+<iframe
+  class="website-card-embed"
+  data-src="https://website-card-embed-demo.vercel.app/?url={{ .Get 0 }}"
+  style="width: 100%; height: 124px"
+  frameborder="no"
+></iframe>
+{{- end -}}
