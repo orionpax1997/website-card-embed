@@ -15,7 +15,7 @@ function AnalysisPage() {
   const { isLoading, isError, analysisData } = useAnalysisData(
     queryAnalysisData.title ? undefined : queryAnalysisData.url
   );
-  const [width, setWidth] = useState(typeof window !== 'undefined' ? window.innerWidth : 0);
+  const [width, setWidth] = useState(0);
 
   useEffect(() => {
     if (websiteCardEmbedColorMode && websiteCardEmbedColorMode !== colorMode) {
@@ -24,6 +24,7 @@ function AnalysisPage() {
   }, [websiteCardEmbedColorMode, colorMode, toggleColorMode]);
 
   useEffect(() => {
+    setWidth(window.innerWidth);
     const handleWindowResize = () => setWidth(window.innerWidth);
     window.addEventListener('resize', handleWindowResize);
     return () => window.removeEventListener('resize', handleWindowResize);

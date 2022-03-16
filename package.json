@@ -20,8 +20,11 @@
     "@emotion/styled": "^11",
     "@humble.xiang/website-description-analysis": "^0.1.15",
     "cheerio": "^1.0.0-rc.10",
+    "chrome-aws-lambda": "^10.1.0",
     "framer-motion": "^5",
     "next": "^12.0.8",
+    "next-absolute-url": "^1.2.2",
+    "puppeteer-core": "^13.5.1",
     "react": "17.0.2",
     "react-dom": "17.0.2",
     "swr": "^1.2.0"

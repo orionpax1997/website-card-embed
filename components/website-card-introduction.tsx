@@ -6,13 +6,14 @@ import { AnalysisData } from '@humble.xiang/website-description-analysis';
 const WebsiteCardIntroduction = ({ url, title, description, image, favicon }: AnalysisData) => {
   const [faviconShow, setFaviconShow] = useState(!!favicon);
   const [imageShow, setImageShow] = useState(!!image);
+  const [loading, setLoading] = useState(!!image);
   return (
     <>
       <Head>
         <title>{title}</title>
         <meta name="description" content={description}></meta>
       </Head>
-      <Center>
+      <Center className={!imageShow || !loading ? 'completed' : undefined}>
         <LinkBox
           w="100%"
           maxW="1200px"
@@ -57,6 +58,7 @@ const WebsiteCardIntroduction = ({ url, title, description, image, favicon }: An
                 objectFit="cover"
                 src={image}
                 alt="website card image"
+                onLoad={() => setLoading(false)}
                 onError={() => setImageShow(false)}
               />
             )}

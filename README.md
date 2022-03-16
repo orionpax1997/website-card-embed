@@ -2,6 +2,8 @@
 
 欢迎使用 Website Card Embed，只需几个步骤， 你就可以在你的网站中支持以卡片的形式进行文章的引用。
 
+[![使用 Website Card Embed 在你的 Blog 中以卡片形式进行文章引用](https://website-card-embed.vercel.app/api/screenshot?url=https://humble-blog.vercel.app/website-card-embed/)](https://humble-blog.vercel.app/website-card-embed/)
+
 ## 演示
 
 ![ezgif](https://cdn.jsdelivr.net/gh/Humble-Xiang/picx-images@master/geek/ezgif.7dedemoeu9o0.gif)
@@ -18,6 +20,16 @@
 ```
 
 到你的 Markdown 文章中预览看下效果。如果你的 Markdown 渲染器支持 iframe，修改 `url=` 后的文章地址来 Enjoy!
+
+[![what-is-hugo](https://website-card-embed.vercel.app/api/screenshot?url=https://gohugo.io/about/what-is-hugo/)](https://gohugo.io/about/what-is-hugo/)
+
+## 降级
+
+值得注意的是上面的方式仅在支持渲染 iframe 标签的 Markdown 引擎中使用，像 Github README 文件是不支持的
+
+[![Github Disallowed Raw HTML](https://website-card-embed.vercel.app/api/screenshot?url=https://github.github.com/gfm/#disallowed-raw-html-extension-)](https://github.github.com/gfm/#disallowed-raw-html-extension-)
+
+Website Card Embed 提供了降级方案 `[![what-is-hugo](https://website-card-embed-demo.vercel.app/api/screenshot?url=https://gohugo.io/about/what-is-hugo/)](https://gohugo.io/about/what-is-hugo/)`，可以使用基础的 Markdown 语法渲染一张带链接的图片在 Github 中使用。
 
 ## 使用 Vercel 部署你自己的服务端
 
@@ -53,8 +65,6 @@
 ```
 
 现在你可以使用 `{{</* card "https://gohugo.io/about/what-is-hugo/" */>}}` 来引用网站了。
-
-> [Create Your Own Shortcodes](https://gohugo.io/templates/shortcode-templates/)
 
 ## 夜间模式支持
 
@@ -96,7 +106,9 @@ Array.from(document.getElementsByClassName('website-card-embed')).forEach(functi
 });
 ```
 
-也可以通过 `你的域名/website-card-embed.js` 引用，在 Hugo 中如何引入 JS 参考 [Hugo - Adding Custom CSS and JS to Themes](https://mcneilcode.com/post/web/hugo/hugo-adding-custom-css-js-themes/)
+也可以通过 `你的域名/website-card-embed.js` 引用
+
+[![hugo-adding-custom-css-js-themes](https://website-card-embed.vercel.app/api/screenshot?url=https://mcneilcode.com/post/web/hugo/hugo-adding-custom-css-js-themes/)](https://mcneilcode.com/post/web/hugo/hugo-adding-custom-css-js-themes/)
 
 如果你使用的 Hugo 主题为 LoveIt 或者基于其开发的新主题，你需要引入的 JS 为 `你的域名/website-card-embed-loveit.js`，代码为
 
@@ -139,7 +151,3 @@ initSelectThemeListener();
 ```
 
 如果你使用的是其他支持夜间模式切换的主题，您也可以参考 `website-card-embed-loveit.js` 来自定义您的颜色模式判断方法。
-
-## 注意
-
-仅在支持渲染 iframe 标签的 Markdown 引擎中使用，Github README 文件不支持，查看 [Github Disallowed Raw HTML](https://github.github.com/gfm/#disallowed-raw-html-extension-)
