@@ -66,6 +66,18 @@ Website Card Embed 提供了降级方案 `[![what-is-hugo](https://website-card-
 
 现在你可以使用 `{{</* card "https://gohugo.io/about/what-is-hugo/" */>}}` 来引用网站了。
 
+## 静态卡片支持
+
+当出现一个网站总是解析失败的时候，你需要考虑使用静态卡片了。仅需要添加  title、description 等而外参数就可以跳过解析直接生成卡片了。注意不要漏掉 url 参数，不然就会出现虽然渲染了卡片，但是不知道跳转到何处的问题。
+
+```md
+{{< card title="What is Hugo"
+url="https://gohugo.io/about/what-is-hugo/"
+description="Hugo is a fast and modern static site generator written in Go, and designed to make website creation fun again."
+favicon="https://gohugo.io/favicon-32x32.png"
+image="https://gohugo.io/opengraph/gohugoio-card-base-1_huf001e7df4fd9c00c4355abac7d4ca455_242906_filter_11180610884299235099.png" >}}
+```
+
 ## 夜间模式支持
 
 想要支持夜间模式你的 `layouts/shortcodes/card.html` 代码需要修改为
