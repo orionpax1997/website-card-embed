@@ -26,7 +26,8 @@ exports[`snapshot build WebsiteCardIntroduction 1`] = `
 }
 
 .emotion-1 a[href]:not(.chakra-linkbox__overlay),
-.emotion-1 abbr[title] {
+.emotion-1 abbr[title],
+.emotion-1 button {
   position: relative;
   z-index: 1;
 }
@@ -235,7 +236,8 @@ exports[`snapshot build WebsiteCardIntroductionError 1`] = `
 }
 
 .emotion-1 a[href]:not(.chakra-linkbox__overlay),
-.emotion-1 abbr[title] {
+.emotion-1 abbr[title],
+.emotion-1 button {
   position: relative;
   z-index: 1;
 }
@@ -582,7 +584,8 @@ exports[`snapshot build WebsiteCardIntroductionMobile 1`] = `
 }
 
 .emotion-1 a[href]:not(.chakra-linkbox__overlay),
-.emotion-1 abbr[title] {
+.emotion-1 abbr[title],
+.emotion-1 button {
   position: relative;
   z-index: 1;
 }
