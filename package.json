@@ -15,7 +15,7 @@
     "test:ci": "jest --ci"
   },
   "dependencies": {
-    "@chakra-ui/react": "^1.8.0",
+    "@chakra-ui/react": "^1.8.9",
     "@emotion/react": "^11",
     "@emotion/styled": "^11",
     "@humble.xiang/website-description-analysis": "^0.1.15",
