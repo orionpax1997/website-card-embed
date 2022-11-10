@@ -20,7 +20,7 @@
     "@emotion/styled": "^11",
     "@humble.xiang/website-description-analysis": "^0.1.15",
     "cheerio": "^1.0.0-rc.10",
-    "chrome-aws-lambda": "~8.0.2",
+    "chrome-aws-lambda": "~6.0.0",
     "framer-motion": "^5",
     "next": "^12.0.8",
     "next-absolute-url": "^1.2.2",
