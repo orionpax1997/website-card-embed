@@ -2,7 +2,7 @@
 
 欢迎使用 Website Card Embed，只需几个步骤， 你就可以在你的网站中支持以卡片的形式进行文章的引用。
 
-[![使用 Website Card Embed 在你的 Blog 中以卡片形式进行文章引用](https://website-card-embed.vercel.app/api/screenshot?url=https://humble-blog.vercel.app/website-card-embed/)](https://humble-blog.vercel.app/website-card-embed/)
+[![使用 Website Card Embed 在你的 Blog 中以卡片形式进行文章引用](https://website-card-embed.humblex.top/api/screenshot?url=https://humble-blog.humblex.top/website-card-embed/)](https://humble-blog.humblex.top/website-card-embed/)
 
 ## 演示
 
@@ -10,26 +10,26 @@
 
 ## 快速上手
 
-直接访问 [Website Card Embed Demo](https://website-card-embed-demo.vercel.app/?url=https://gohugo.io/about/what-is-hugo/) 或者复制以下代码
+直接访问 [Website Card Embed Demo](https://website-card-embed-demo.humblex.top/?url=https://gohugo.io/about/what-is-hugo/) 或者复制以下代码
 
 ```md
 <iframe 
-  src="https://website-card-embed-demo.vercel.app/?url=https://gohugo.io/about/what-is-hugo/" 
+  src="https://website-card-embed-demo.humblex.top/?url=https://gohugo.io/about/what-is-hugo/" 
   style="width:100%;height:124px" frameborder="no">
 </iframe>
 ```
 
 到你的 Markdown 文章中预览看下效果。如果你的 Markdown 渲染器支持 iframe，修改 `url=` 后的文章地址来 Enjoy!
 
-[![what-is-hugo](https://website-card-embed.vercel.app/api/screenshot?url=https://gohugo.io/about/what-is-hugo/)](https://gohugo.io/about/what-is-hugo/)
+[![what-is-hugo](https://website-card-embed.humblex.top/api/screenshot?url=https://gohugo.io/about/what-is-hugo/)](https://gohugo.io/about/what-is-hugo/)
 
 ## 降级
 
 值得注意的是上面的方式仅在支持渲染 iframe 标签的 Markdown 引擎中使用，像 Github README 文件是不支持的
 
-[![Github Disallowed Raw HTML](https://website-card-embed.vercel.app/api/screenshot?url=https://github.github.com/gfm/#disallowed-raw-html-extension-)](https://github.github.com/gfm/#disallowed-raw-html-extension-)
+[![Github Disallowed Raw HTML](https://website-card-embed.humblex.top/api/screenshot?url=https://github.github.com/gfm/#disallowed-raw-html-extension-)](https://github.github.com/gfm/#disallowed-raw-html-extension-)
 
-Website Card Embed 提供了降级方案 `[![what-is-hugo](https://website-card-embed-demo.vercel.app/api/screenshot?url=https://gohugo.io/about/what-is-hugo/)](https://gohugo.io/about/what-is-hugo/)`，可以使用基础的 Markdown 语法渲染一张带链接的图片在 Github 中使用。
+Website Card Embed 提供了降级方案 `[![what-is-hugo](https://website-card-embed-demo.humblex.top/api/screenshot?url=https://gohugo.io/about/what-is-hugo/)](https://gohugo.io/about/what-is-hugo/)`，可以使用基础的 Markdown 语法渲染一张带链接的图片在 Github 中使用。
 
 ## 使用 Vercel 部署你自己的服务端
 
@@ -68,7 +68,7 @@ Website Card Embed 提供了降级方案 `[![what-is-hugo](https://website-card-
 
 ## 静态卡片支持
 
-当出现一个网站总是解析失败的时候，你需要考虑使用静态卡片了。仅需要添加  title、description 等而外参数就可以跳过解析直接生成卡片了。注意不要漏掉 url 参数，不然就会出现虽然渲染了卡片，但是不知道跳转到何处的问题。
+当出现一个网站总是解析失败的时候，你需要考虑使用静态卡片了。仅需要添加 title、description 等而外参数就可以跳过解析直接生成卡片了。注意不要漏掉 url 参数，不然就会出现虽然渲染了卡片，但是不知道跳转到何处的问题。
 
 ```md
 {{< card title="What is Hugo"
@@ -86,14 +86,14 @@ image="https://gohugo.io/opengraph/gohugoio-card-base-1_huf001e7df4fd9c00c4355ab
 {{- if .IsNamedParams -}}
 <iframe
   class="website-card-embed"
-  data-src="https://website-card-embed-demo.vercel.app/?url={{ .Get `url` }}&title={{ .Get `title` }}&description={{ .Get `description` }}&image={{ .Get `image` }}&favicon={{ .Get `favicon` }}"
+  data-src="https://website-card-embed-demo.humblex.top/?url={{ .Get `url` }}&title={{ .Get `title` }}&description={{ .Get `description` }}&image={{ .Get `image` }}&favicon={{ .Get `favicon` }}"
   style="width: 100%; height: 124px"
   frameborder="no"
 ></iframe>
 {{- else -}}
 <iframe
   class="website-card-embed"
-  data-src="https://website-card-embed-demo.vercel.app/?url={{ .Get 0 }}"
+  data-src="https://website-card-embed-demo.humblex.top/?url={{ .Get 0 }}"
   style="width: 100%; height: 124px"
   frameborder="no"
 ></iframe>
@@ -120,7 +120,7 @@ Array.from(document.getElementsByClassName('website-card-embed')).forEach(functi
 
 也可以通过 `你的域名/website-card-embed.js` 引用
 
-[![hugo-adding-custom-css-js-themes](https://website-card-embed.vercel.app/api/screenshot?url=https://mcneilcode.com/post/web/hugo/hugo-adding-custom-css-js-themes/)](https://mcneilcode.com/post/web/hugo/hugo-adding-custom-css-js-themes/)
+[![hugo-adding-custom-css-js-themes](https://website-card-embed.humblex.top/api/screenshot?url=https://mcneilcode.com/post/web/hugo/hugo-adding-custom-css-js-themes/)](https://mcneilcode.com/post/web/hugo/hugo-adding-custom-css-js-themes/)
 
 如果你使用的 Hugo 主题为 LoveIt 或者基于其开发的新主题，你需要引入的 JS 为 `你的域名/website-card-embed-loveit.js`，代码为
 
