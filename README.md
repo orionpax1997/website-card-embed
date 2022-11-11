@@ -2,7 +2,7 @@
 
 欢迎使用 Website Card Embed，只需几个步骤， 你就可以在你的网站中支持以卡片的形式进行文章的引用。
 
-[![使用 Website Card Embed 在你的 Blog 中以卡片形式进行文章引用](https://website-card-embed.humblex.top/api/screenshot?url=https://humble-blog.humblex.top/website-card-embed/)](https://humble-blog.humblex.top/website-card-embed/)
+[![使用 Website Card Embed 在你的 Blog 中以卡片形式进行文章引用](https://website-card-embed.humblex.top/api/screenshot?url=https://blog.humblex.top/website-card-embed/)](https://blog.humblex.top/website-card-embed/)
 
 ## 演示
 
