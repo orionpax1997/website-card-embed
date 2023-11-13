@@ -7,12 +7,12 @@ import WebsiteCardIntroductionError from '@/components/website-card-introduction
 describe('snapshot', () => {
   it('build WebsiteCardIntroduction', () => {
     const analysisData = {
-      url: 'https://blog.humblex.top/',
+      url: 'https://blog.dramacat.top/',
       title: '向之礼的个人博客',
       description: '一个打工人的个人博客小站',
-      image: 'https://images.weserv.nl/?url=https://blog.humblex.top/images/avatar.jpg',
+      image: 'https://images.weserv.nl/?url=https://blog.dramacat.top/images/avatar.jpg',
       favicon:
-        'https://t3.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE,SIZE,URL&url=https://blog.humblex.top/&size=16',
+        'https://t3.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE,SIZE,URL&url=https://blog.dramacat.top/&size=16',
     };
     const { container } = render(<WebsiteCardIntroduction {...analysisData} />);
     expect(container).toMatchSnapshot();
@@ -20,12 +20,12 @@ describe('snapshot', () => {
 
   it('build WebsiteCardIntroductionMobile', () => {
     const analysisData = {
-      url: 'https://blog.humblex.top/',
+      url: 'https://blog.dramacat.top/',
       title: '向之礼的个人博客',
       description: '一个打工人的个人博客小站',
-      image: 'https://images.weserv.nl/?url=https://blog.humblex.top/images/avatar.jpg',
+      image: 'https://images.weserv.nl/?url=https://blog.dramacat.top/images/avatar.jpg',
       favicon:
-        'https://t3.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE,SIZE,URL&url=https://blog.humblex.top/&size=16',
+        'https://t3.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE,SIZE,URL&url=https://blog.dramacat.top/&size=16',
     };
     const { container } = render(<WebsiteCardIntroductionMobile {...analysisData} />);
     expect(container).toMatchSnapshot();
@@ -37,7 +37,7 @@ describe('snapshot', () => {
   });
 
   it('build WebsiteCardIntroductionError', () => {
-    const { container } = render(<WebsiteCardIntroductionError url="https://blog.humblex.top/" />);
+    const { container } = render(<WebsiteCardIntroductionError url="https://blog.dramacat.top/" />);
     expect(container).toMatchSnapshot();
   });
 });

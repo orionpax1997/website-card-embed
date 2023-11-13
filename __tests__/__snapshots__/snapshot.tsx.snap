@@ -169,7 +169,7 @@ exports[`snapshot build WebsiteCardIntroduction 1`] = `
           >
             <a
               class="chakra-linkbox__overlay emotion-5"
-              href="https://blog.humblex.top/"
+              href="https://blog.dramacat.top/"
               target="_blank"
             >
               向之礼的个人博客
@@ -190,19 +190,19 @@ exports[`snapshot build WebsiteCardIntroduction 1`] = `
             <img
               alt="website card icon"
               class="chakra-image emotion-9"
-              src="https://t3.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE,SIZE,URL&url=https://blog.humblex.top/&size=16"
+              src="https://t3.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE,SIZE,URL&url=https://blog.dramacat.top/&size=16"
             />
             <p
               class="chakra-text emotion-10"
             >
-              https://blog.humblex.top/
+              https://blog.dramacat.top/
             </p>
           </div>
         </div>
         <img
           alt="website card image"
           class="chakra-image emotion-11"
-          src="https://images.weserv.nl/?url=https://blog.humblex.top/images/avatar.jpg"
+          src="https://images.weserv.nl/?url=https://blog.dramacat.top/images/avatar.jpg"
         />
       </div>
     </div>
@@ -366,7 +366,7 @@ exports[`snapshot build WebsiteCardIntroductionError 1`] = `
           >
             <a
               class="chakra-linkbox__overlay emotion-5"
-              href="https://blog.humblex.top/"
+              href="https://blog.dramacat.top/"
               target="_blank"
             >
               很抱歉, 嵌入网址的描述信息无法正常解析
@@ -387,7 +387,7 @@ exports[`snapshot build WebsiteCardIntroductionError 1`] = `
             <p
               class="chakra-text emotion-9"
             >
-              https://blog.humblex.top/
+              https://blog.dramacat.top/
             </p>
           </div>
         </div>
@@ -708,7 +708,7 @@ exports[`snapshot build WebsiteCardIntroductionMobile 1`] = `
         >
           <a
             class="chakra-linkbox__overlay emotion-4"
-            href="https://blog.humblex.top/"
+            href="https://blog.dramacat.top/"
             target="_blank"
           >
             向之礼的个人博客
@@ -729,12 +729,12 @@ exports[`snapshot build WebsiteCardIntroductionMobile 1`] = `
           <img
             alt="website card icon"
             class="chakra-image emotion-8"
-            src="https://t3.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE,SIZE,URL&url=https://blog.humblex.top/&size=16"
+            src="https://t3.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE,SIZE,URL&url=https://blog.dramacat.top/&size=16"
           />
           <p
             class="chakra-text emotion-9"
           >
-            https://blog.humblex.top/
+            https://blog.dramacat.top/
           </p>
         </div>
       </div>
