@@ -1,7 +1,7 @@
 import Head from 'next/head';
 import { useState } from 'react';
 import { Box, Center, HStack, VStack, Image, Text, LinkBox, LinkOverlay } from '@chakra-ui/react';
-import { AnalysisData } from '@humble.xiang/website-description-analysis';
+import { AnalysisData } from '@orionpax/website-description-analysis';
 
 const WebsiteCardIntroductionMobile = ({ url, title, description, favicon }: AnalysisData) => {
   const [faviconShow, setFaviconShow] = useState(!!favicon);

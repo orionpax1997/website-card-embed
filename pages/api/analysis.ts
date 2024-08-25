@@ -1,5 +1,5 @@
 import { NextApiRequest, NextApiResponse } from 'next';
-import AnalysisFactory from '@humble.xiang/website-description-analysis';
+import AnalysisFactory from '@orionpax/website-description-analysis';
 
 const analysis = async (_: NextApiRequest, res: NextApiResponse) => {
   try {

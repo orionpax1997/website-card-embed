@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 import { useRouter } from 'next/router';
 import useSWR, { Fetcher } from 'swr';
-import { AnalysisData } from '@humble.xiang/website-description-analysis';
+import { AnalysisData } from '@orionpax/website-description-analysis';
 import WebsiteCardIntroduction from '@/components/website-card-introduction';
 import WebsiteCardIntroductionMobile from '@/components/website-card-introduction-mobile';
 import WebsiteCardIntroductionError from '@/components/website-card-introduction-error';
