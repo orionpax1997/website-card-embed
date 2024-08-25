@@ -3,7 +3,7 @@
   "version": "0.0.1",
   "description": "一个将网站信息页面卡片化的插件, 用于在博客页面中嵌入",
   "main": "dist/index.js",
-  "author": "Humble.X",
+  "author": "OrionPax",
   "license": "MIT",
   "scripts": {
     "dev": "next dev",
@@ -18,7 +18,7 @@
     "@chakra-ui/react": "^1.8.9",
     "@emotion/react": "^11",
     "@emotion/styled": "^11",
-    "@humble.xiang/website-description-analysis": "^0.1.15",
+    "@orionpax/website-description-analysis": "^1.0.4",
     "cheerio": "^1.0.0-rc.10",
     "chrome-aws-lambda": "~6.0.0",
     "framer-motion": "^5",
