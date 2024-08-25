@@ -18,8 +18,8 @@ importers:
         specifier: ^11
         version: 11.13.0(@emotion/react@11.13.3(@types/react@17.0.80)(react@17.0.2))(@types/react@17.0.80)(react@17.0.2)
       '@orionpax/website-description-analysis':
-        specifier: ^1.0.4
-        version: 1.0.4
+        specifier: ^1.0.5
+        version: 1.0.5
       cheerio:
         specifier: ^1.0.0-rc.10
         version: 1.0.0
@@ -982,8 +982,8 @@ packages:
     resolution: {integrity: sha512-oGB+UxlgWcgQkgwo8GcEGwemoTFt3FIO9ababBmaGwXIoBKZ+GTy0pP185beGg7Llih/NSHSV2XAs1lnznocSg==}
     engines: {node: '>= 8'}
 
-  '@orionpax/website-description-analysis@1.0.4':
-    resolution: {integrity: sha512-5hQ0PWdld9DlT5W/q/Jg4fG3pEkyMbuldkWXD5sC8gcXb9D42nqp6J4XhHpivYc0G7NXArFjFSxsg3SHzXI6CA==}
+  '@orionpax/website-description-analysis@1.0.5':
+    resolution: {integrity: sha512-O/OGqzbYVgDFGc1vAFO19rdiylZQK3XYeJ7tjOvCFoGJuQ5VaXbeHbO65G2UA06MjyoQmQPDxWlXxLwJQW6YEg==}
 
   '@popperjs/core@2.11.8':
     resolution: {integrity: sha512-P1st0aksCrn9sGZhp8GMYwBnQsbvAWsZAX44oXNNvLHGqAOcoVxmjZiohstwQ7SqKnbR47akdNi+uleWD8+g6A==}
@@ -5139,7 +5139,7 @@ snapshots:
       '@nodelib/fs.scandir': 2.1.5
       fastq: 1.17.1
 
-  '@orionpax/website-description-analysis@1.0.4':
+  '@orionpax/website-description-analysis@1.0.5':
     dependencies:
       cheerio: 1.0.0
       chrome-aws-lambda: 6.0.0(puppeteer-core@13.7.0)
