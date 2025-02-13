@@ -18,8 +18,8 @@ importers:
         specifier: ^11
         version: 11.13.0(@emotion/react@11.13.3(@types/react@17.0.80)(react@17.0.2))(@types/react@17.0.80)(react@17.0.2)
       '@orionpax/website-description-analysis':
-        specifier: ^1.0.10
-        version: 1.0.10
+        specifier: ^1.0.11
+        version: 1.0.11
       '@sparticuz/chromium':
         specifier: ^132.0.0
         version: 132.0.0
@@ -982,8 +982,8 @@ packages:
     resolution: {integrity: sha512-oGB+UxlgWcgQkgwo8GcEGwemoTFt3FIO9ababBmaGwXIoBKZ+GTy0pP185beGg7Llih/NSHSV2XAs1lnznocSg==}
     engines: {node: '>= 8'}
 
-  '@orionpax/website-description-analysis@1.0.10':
-    resolution: {integrity: sha512-Uep4jp7EeXqrSaSMYAwJkSDPSE+mMoSGwVAL9QvtGisjHTC5oDdII48jAFsda5xHTMuH/3oTc4/nExCoOXMk0w==}
+  '@orionpax/website-description-analysis@1.0.11':
+    resolution: {integrity: sha512-+nybl8fv6O+8nVI11FR39i8lZUiph7+bb7G750iXqP7Z8s6qSfjUOHQaxyA1yLIeJScBwC2kxIX5tErTrRd58A==}
 
   '@popperjs/core@2.11.8':
     resolution: {integrity: sha512-P1st0aksCrn9sGZhp8GMYwBnQsbvAWsZAX44oXNNvLHGqAOcoVxmjZiohstwQ7SqKnbR47akdNi+uleWD8+g6A==}
@@ -5240,7 +5240,7 @@ snapshots:
       '@nodelib/fs.scandir': 2.1.5
       fastq: 1.17.1
 
-  '@orionpax/website-description-analysis@1.0.10':
+  '@orionpax/website-description-analysis@1.0.11':
     dependencies:
       '@sparticuz/chromium': 132.0.0
       cheerio: 1.0.0
