@@ -18,7 +18,7 @@
     "@chakra-ui/react": "^1.8.9",
     "@emotion/react": "^11",
     "@emotion/styled": "^11",
-    "@orionpax/website-description-analysis": "^1.0.6",
+    "@orionpax/website-description-analysis": "^1.0.8",
     "cheerio": "^1.0.0-rc.10",
     "chrome-aws-lambda": "~6.0.0",
     "framer-motion": "^5",
