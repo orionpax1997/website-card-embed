@@ -1,10 +1,10 @@
 import { NextApiRequest, NextApiResponse } from 'next';
-import core from 'puppeteer-core';
+import core, { Browser } from 'puppeteer-core';
 import absoluteUrl from 'next-absolute-url';
 import { getOptions } from './_lib/options';
 
 const isDev = !process.env.AWS_REGION;
-let _browser: core.Browser | null;
+let _browser: Browser | null;
 
 const screenshot = async (req: NextApiRequest, res: NextApiResponse) => {
   try {
