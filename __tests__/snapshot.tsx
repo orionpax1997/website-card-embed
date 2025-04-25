@@ -32,7 +32,7 @@ describe('snapshot', () => {
   });
 
   it('build WebsiteCardIntroductionLoading', () => {
-    const { container } = render(<WebsiteCardIntroductionLoading hasImage={true} />);
+    const { container } = render(<WebsiteCardIntroductionLoading hasImage={true} url="https://blog.qingtian.me/" />);
     expect(container).toMatchSnapshot();
   });
 

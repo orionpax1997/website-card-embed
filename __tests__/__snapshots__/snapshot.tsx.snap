@@ -252,7 +252,6 @@ exports[`snapshot build WebsiteCardIntroductionError 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  height: 120px;
 }
 
 .emotion-3 {
@@ -307,47 +306,6 @@ exports[`snapshot build WebsiteCardIntroductionError 1`] = `
   height: 100%;
 }
 
-.emotion-7 {
-  font-size: xs;
-  color: gray.500;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  display: -webkit-box;
-  -webkit-box-orient: vertical;
-  -webkit-line-clamp: var(--chakra-line-clamp);
-  --chakra-line-clamp: 2;
-}
-
-.emotion-8 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-}
-
-.emotion-8>*:not(style)~*:not(style) {
-  margin-top: 0px;
-  -webkit-margin-end: 0px;
-  margin-inline-end: 0px;
-  margin-bottom: 0px;
-  -webkit-margin-start: 10px;
-  margin-inline-start: 10px;
-}
-
-.emotion-9 {
-  font-size: xs;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  white-space: nowrap;
-}
-
 <div>
   <div
     class="emotion-0"
@@ -369,27 +327,9 @@ exports[`snapshot build WebsiteCardIntroductionError 1`] = `
               href="https://blog.qingtian.me/"
               target="_blank"
             >
-              很抱歉, 嵌入网址的描述信息无法正常解析
+              https://blog.qingtian.me/
             </a>
           </h4>
-          <div
-            class="emotion-6"
-          >
-            <p
-              class="chakra-text emotion-7"
-            >
-              请直接点击卡片访问原网页查看。或者您可以补充更多参数, 来跳过解析直接展示静态卡片。
-            </p>
-          </div>
-          <div
-            class="chakra-stack emotion-8"
-          >
-            <p
-              class="chakra-text emotion-9"
-            >
-              https://blog.qingtian.me/
-            </p>
-          </div>
         </div>
       </div>
     </div>
@@ -451,23 +391,19 @@ exports[`snapshot build WebsiteCardIntroductionLoading 1`] = `
 }
 
 .emotion-3 {
-  box-shadow: none;
-  -webkit-background-clip: padding-box;
-  background-clip: padding-box;
-  cursor: default;
-  color: transparent;
-  pointer-events: none;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-  height: 20px;
+  position: static;
 }
 
-.emotion-3::before,
-.emotion-3::after,
-.emotion-3 * {
-  visibility: hidden;
+.emotion-3::before {
+  content: '';
+  cursor: inherit;
+  display: block;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  z-index: 1;
+  width: 100%;
+  height: 100%;
 }
 
 .emotion-4 {
@@ -481,7 +417,7 @@ exports[`snapshot build WebsiteCardIntroductionLoading 1`] = `
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
-  height: 40px;
+  height: 20px;
 }
 
 .emotion-4::before,
@@ -501,7 +437,7 @@ exports[`snapshot build WebsiteCardIntroductionLoading 1`] = `
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
-  height: 16px;
+  height: 40px;
 }
 
 .emotion-5::before,
@@ -521,13 +457,33 @@ exports[`snapshot build WebsiteCardIntroductionLoading 1`] = `
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
-  width: 40%;
-  height: 100%;
+  height: 16px;
 }
 
 .emotion-6::before,
 .emotion-6::after,
 .emotion-6 * {
+  visibility: hidden;
+}
+
+.emotion-7 {
+  box-shadow: none;
+  -webkit-background-clip: padding-box;
+  background-clip: padding-box;
+  cursor: default;
+  color: transparent;
+  pointer-events: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  width: 40%;
+  height: 100%;
+}
+
+.emotion-7::before,
+.emotion-7::after,
+.emotion-7 * {
   visibility: hidden;
 }
 
@@ -541,18 +497,24 @@ exports[`snapshot build WebsiteCardIntroductionLoading 1`] = `
       <div
         class="chakra-stack emotion-2"
       >
-        <div
-          class="chakra-skeleton emotion-3"
-        />
-        <div
-          class="chakra-skeleton emotion-4"
-        />
+        <a
+          class="chakra-linkbox__overlay emotion-3"
+          href="https://blog.qingtian.me/"
+          target="_blank"
+        >
+          <div
+            class="chakra-skeleton emotion-4"
+          />
+        </a>
         <div
           class="chakra-skeleton emotion-5"
         />
+        <div
+          class="chakra-skeleton emotion-6"
+        />
       </div>
       <div
-        class="chakra-skeleton emotion-6"
+        class="chakra-skeleton emotion-7"
       />
     </div>
   </div>

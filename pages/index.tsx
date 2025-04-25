@@ -15,33 +15,28 @@ function AnalysisPage() {
   const { isLoading, isError, analysisData } = useAnalysisData(
     queryAnalysisData.title ? undefined : queryAnalysisData.url
   );
-  const [width, setWidth] = useState(0);
+
+  const useWindowWidth = () => {
+    const [width, setWidth] = useState(
+      () => (typeof window !== 'undefined' ? window.innerWidth : 0) // SSR兼容
+    );
+
+    useEffect(() => {
+      const handleResize = () => setWidth(window.innerWidth);
+      window.addEventListener('resize', handleResize);
+      return () => window.removeEventListener('resize', handleResize);
+    }, []);
+
+    return width;
+  };
+
+  const width = useWindowWidth();
 
   useEffect(() => {
     if (websiteCardEmbedColorMode && websiteCardEmbedColorMode !== colorMode) {
       toggleColorMode();
     }
   }, [websiteCardEmbedColorMode, colorMode, toggleColorMode]);
-
-  useEffect(() => {
-    const handleLoad = () => {
-      setWidth(window.innerWidth);
-      const handleResize = () => setWidth(window.innerWidth);
-      window.addEventListener('resize', handleResize);
-      return () => window.removeEventListener('resize', handleResize);
-    };
-
-    // 若DOM已加载完成，直接执行
-    if (document.readyState === 'complete') {
-      handleLoad();
-    } else {
-      document.addEventListener('DOMContentLoaded', handleLoad);
-    }
-
-    return () => {
-      document.removeEventListener('DOMContentLoaded', handleLoad);
-    };
-  }, []);
 
   if (queryAnalysisData.title)
     return width < 620 ? (
@@ -50,14 +45,14 @@ function AnalysisPage() {
       <WebsiteCardIntroduction {...queryAnalysisData} />
     );
   if (isError) return <WebsiteCardIntroductionError url={queryAnalysisData.url} />;
-  if (isLoading) return <WebsiteCardIntroductionLoading hasImage={width >= 620} />;
+  if (isLoading) return <WebsiteCardIntroductionLoading hasImage={width >= 620} url={queryAnalysisData.url} />;
   if (analysisData)
     return width < 620 ? (
       <WebsiteCardIntroductionMobile {...analysisData} />
     ) : (
       <WebsiteCardIntroduction {...analysisData} />
     );
-  return <WebsiteCardIntroductionLoading hasImage={width >= 620} />;
+  return <WebsiteCardIntroductionLoading hasImage={width >= 620} url={queryAnalysisData.url} />;
 }
 
 const analysisDataFetcher: Fetcher<AnalysisData, string> = url => fetch(url).then(res => res.json());
