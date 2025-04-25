@@ -24,11 +24,24 @@ function AnalysisPage() {
   }, [websiteCardEmbedColorMode, colorMode, toggleColorMode]);
 
   useEffect(() => {
-    setWidth(window.innerWidth);
-    const handleWindowResize = () => setWidth(window.innerWidth);
-    window.addEventListener('resize', handleWindowResize);
-    return () => window.removeEventListener('resize', handleWindowResize);
-  }, [width]);
+    const handleLoad = () => {
+      setWidth(window.innerWidth);
+      const handleResize = () => setWidth(window.innerWidth);
+      window.addEventListener('resize', handleResize);
+      return () => window.removeEventListener('resize', handleResize);
+    };
+
+    // 若DOM已加载完成，直接执行
+    if (document.readyState === 'complete') {
+      handleLoad();
+    } else {
+      document.addEventListener('DOMContentLoaded', handleLoad);
+    }
+
+    return () => {
+      document.removeEventListener('DOMContentLoaded', handleLoad);
+    };
+  }, []);
 
   if (queryAnalysisData.title)
     return width < 620 ? (
